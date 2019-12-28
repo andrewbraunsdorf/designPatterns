@@ -49,6 +49,16 @@ namespace OpenClosed
                 if (p.Size == size && p.Color == color)
                     yield return p;
         }
+
+        public interface ISpecification<T>
+        {
+            bool IsSatisfied(Product p);
+        }
+
+        public interface IFilter<T>
+        {
+            IEnumerable<T> Filter(IEnumerable<T> items, ISpecification<T> spec);
+        }
     }
       public class Demo
     {
