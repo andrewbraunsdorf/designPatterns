@@ -60,6 +60,21 @@ namespace OpenClosed
             IEnumerable<T> Filter(IEnumerable<T> items, ISpecification<T> spec);
         }
     }
+
+    public class ColorSpecification : ISpecification<Product>
+    {
+        private Color color;
+
+        public ColorSpecification(Color color)
+        {
+            this.color = color;
+        }
+
+        public bool IsSatisfied(Product p)
+        {
+            return p.Color == color;
+        }
+    }
       public class Demo
     {
         static void Main(string[] args)
