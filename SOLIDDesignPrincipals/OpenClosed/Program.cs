@@ -27,7 +27,7 @@ namespace OpenClosed
         }
     }
 
-     public class ProductFilter
+    public class ProductFilter
     {
         // let's suppose we don't want ad-hoc queries on products
         public IEnumerable<Product> FilterByColor(IEnumerable<Product> products, Color color)
@@ -91,7 +91,7 @@ namespace OpenClosed
         }
     }
 
-        public class AndSpecification<T> : ISpecification<T>
+    public class AndSpecification<T> : ISpecification<T>
     {
         private ISpecification<T> first, second;
 
@@ -116,11 +116,21 @@ namespace OpenClosed
                     yield return i;
         }
     }
-      public class Demo
+
+    public class Demo
     {
         static void Main(string[] args)
         {
+            var apple = new Product("Apple", Color.Green, Size.Small);
+            var tree = new Product("Tree", Color.Green, Size.Large);
+            var house = new Product("House", Color.Blue, Size.Large);
 
+            Product[] products = { apple, tree, house };
+
+            var pf = new ProductFilter();
+            WriteLine("Green products:");
+            foreach (var p in pf.FilterByColor(products, Color.Green))
+                WriteLine($" - {p.Name} is green");
         }
     }
 }
