@@ -127,22 +127,22 @@ namespace OpenClosed
 
             Product[] products = { apple, tree, house };
 
-            var pf = new ProductFilter();
+            var productFilter = new ProductFilter();
             WriteLine("Green products:");
-            foreach (var p in pf.FilterByColor(products, Color.Green))
+            foreach (var p in productFilter.FilterByColor(products, Color.Green))
                 WriteLine($" - {p.Name} is green");
 
-            var bf = new BetterFilter();
+            var betterFilter = new BetterFilter();
             WriteLine("Green products (new):");
-            foreach (var p in bf.Filter(products, new ColorSpecification(Color.Green)))
+            foreach (var p in betterFilter.Filter(products, new ColorSpecification(Color.Green)))
                 WriteLine($" - {p.Name} is green");
 
             WriteLine("Large products");
-            foreach (var p in bf.Filter(products, new SizeSpecification(Size.Large)))
+            foreach (var p in betterFilter.Filter(products, new SizeSpecification(Size.Large)))
                 WriteLine($" - {p.Name} is large");
 
             WriteLine("Large blue items");
-            foreach (var p in bf.Filter(products,
+            foreach (var p in betterFilter.Filter(products,
               new AndSpecification<Product>(new ColorSpecification(Color.Blue), new SizeSpecification(Size.Large)))
             )
             {
