@@ -148,7 +148,7 @@ namespace OpenClosed
             {
                 WriteLine($" - {p.Name} is big and blue");
             }
-
+            Console.ReadLine();
         }
     }
 }
