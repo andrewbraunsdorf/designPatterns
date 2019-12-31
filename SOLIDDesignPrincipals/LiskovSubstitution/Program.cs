@@ -35,7 +35,8 @@ namespace DotNetDesignPatternDemos.SOLID.LiskovSubstitutionPrinciple
 
         static void Main(string[] args)
         {
-
+            Rectangle rc = new Rectangle(2, 3);
+            WriteLine($"{rc} has area {Area(rc)}");
             Console.ReadLine();
         }
     }
