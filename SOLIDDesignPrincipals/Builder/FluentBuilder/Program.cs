@@ -23,6 +23,26 @@ namespace FluentBuilder
         }
     }
 
+        public abstract class PersonBuilder
+    {
+        protected Person person = new Person();
+
+        public Person Build()
+        {
+            return person;
+        }
+    }
+
+    public class PersonInfoBuilder<SELF> : PersonBuilder
+        where SELF : PersonInfoBuilder<SELF>
+    {
+        public SELF Called(string name)
+        {
+            person.Name = name;
+            return (SELF)this;
+        }
+     }   
+
     class Program
     {
         public static void Main(string[] args)
