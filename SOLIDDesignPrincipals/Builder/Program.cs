@@ -93,6 +93,27 @@ namespace Builder
             sb.Append("</p>");
             Console.WriteLine(sb);
 
+                        var words = new[] { "hello", "world" };
+            sb.Clear();
+            sb.Append("<ul>");
+            foreach (var word in words)
+            {
+                sb.AppendFormat("<li>{0}</li>", word);
+            }
+            sb.Append("</ul>");
+            Console.WriteLine(sb);
+
+            var builder = new HtmlBuilder("ul");
+            builder.AddChild("li", "hello");
+            builder.AddChild("li", "world");
+            Console.WriteLine(builder.ToString());
+
+
+            sb.Clear();
+            builder.Clear(); 
+            builder.AddChildFluent("li", "hello").AddChildFluent("li", "world");
+            Console.WriteLine(builder);
+
             Console.ReadLine();
         }
     }
