@@ -43,6 +43,26 @@ namespace FluentBuilder
         }
      }   
 
+    public class PersonJobBuilder<SELF>: PersonInfoBuilder<PersonJobBuilder<SELF>> 
+      where SELF : PersonJobBuilder<SELF>
+    {
+        public SELF WorksAsA(string position)
+        {
+            person.Position = position;
+            return (SELF)this;
+        }
+    }
+
+    public class PersonBirthDateBuilder<SELF>: PersonJobBuilder<PersonBirthDateBuilder<SELF>> 
+      where SELF : PersonBirthDateBuilder<SELF>
+    {
+        public SELF Born(DateTime dateOfBirth)
+        {
+            person.DateOfBirth = dateOfBirth;
+            return (SELF)this;
+        }
+    }
+
     class Program
     {
         public static void Main(string[] args)
