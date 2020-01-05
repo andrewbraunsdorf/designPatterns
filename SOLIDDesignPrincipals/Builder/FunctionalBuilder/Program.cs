@@ -39,6 +39,10 @@ namespace FunctionalBuilder
     {
         public static void Main(string[] args)
         {
+            var pb = new PersonBuilder();
+            var person = pb.Called("Dmitri").WorksAsA("Programmer").Build();
+            Console.WriteLine(person);
+            Console.ReadLine();
         }
     }
 }
