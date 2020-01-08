@@ -44,6 +44,20 @@ namespace PointExample
         {
             return null;
         }
+
+        public enum CoordinateSystem
+        {
+            Cartesian,
+            Polar
+        }
+
+        public static class Factory
+        {
+            public static Point NewCartesianPoint(double x, double y)
+            {
+                return new Point(x, y);
+            }
+        }
     }
 
 
