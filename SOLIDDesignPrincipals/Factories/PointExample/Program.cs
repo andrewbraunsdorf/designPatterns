@@ -29,6 +29,21 @@ namespace PointExample
             }
 
         }
+
+                public static Point Origin => new Point(0, 0);
+
+        public static Point Origin2 = new Point(0, 0);
+
+
+        public static Point NewCartesianPoint(double x, double y)
+        {
+            return new Point(x, y);
+        }
+
+        public static Point NewPolarPoint(double rho, double theta)
+        {
+            return null;
+        }
     }
 
 
