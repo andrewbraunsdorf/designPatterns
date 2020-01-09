@@ -69,6 +69,16 @@ namespace AbstractFactory
              factories.Add(drink, factory);
             }
         }
+
+        public IHotDrink MakeDrink()
+        {
+            Console.WriteLine("Available drinks");
+            for (var index = 0; index < namedFactories.Count; index++)
+            {
+                var tuple = namedFactories[index];
+                Console.WriteLine($"{index}: {tuple.Item1}");
+            }
+        }
     }
 
     class Program
