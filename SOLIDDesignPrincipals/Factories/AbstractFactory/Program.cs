@@ -47,17 +47,35 @@ namespace AbstractFactory
         }
     }
 
+    public class HotDrinkMachine
+    {
+        public enum AvailableDrink // violates open-closed
+        {
+            Coffee, Tea
+        }
+
+        private Dictionary<AvailableDrink, IHotDrinkFactory> factories =
+          new Dictionary<AvailableDrink, IHotDrinkFactory>();
+
+        private List<Tuple<string, IHotDrinkFactory>> namedFactories =
+          new List<Tuple<string, IHotDrinkFactory>>();
+
+        public HotDrinkMachine()
+        {
+            foreach (AvailableDrink drink in Enum.GetValues(typeof(AvailableDrink)))
+            {
+             var factory = (IHotDrinkFactory) Activator.CreateInstance(
+               Type.GetType("AbstractFactory" + Enum.GetName(typeof(AvailableDrink), drink) + "Factory"));
+             factories.Add(drink, factory);
+            }
+        }
+    }
 
     class Program
     {
         static void Main(string[] args)
         {
             var machine = new HotDrinkMachine();
-            //var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Tea, 300);
-            //drink.Consume();
-
-            IHotDrink drink = machine.MakeDrink();
-            drink.Consume();
         }
     }
 }
