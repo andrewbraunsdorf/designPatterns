@@ -62,11 +62,13 @@ namespace AbstractFactory
 
         public HotDrinkMachine()
         {
-            foreach (AvailableDrink drink in Enum.GetValues(typeof(AvailableDrink)))
+            foreach (var t in typeof(HotDrinkMachine).Assembly.GetTypes())
             {
-             var factory = (IHotDrinkFactory) Activator.CreateInstance(
-               Type.GetType("AbstractFactory" + Enum.GetName(typeof(AvailableDrink), drink) + "Factory"));
-             factories.Add(drink, factory);
+                if (typeof(IHotDrinkFactory).IsAssignableFrom(t) && !t.IsInterface)
+                {
+                    namedFactories.Add(Tuple.Create(
+                      t.Name.Replace("Factory", string.Empty), (IHotDrinkFactory)Activator.CreateInstance(t)));
+                }
             }
         }
 
