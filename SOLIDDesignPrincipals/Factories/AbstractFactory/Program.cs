@@ -78,9 +78,28 @@ namespace AbstractFactory
                 var tuple = namedFactories[index];
                 Console.WriteLine($"{index}: {tuple.Item1}");
             }
+
+            while (true)
+            {
+                string s;
+                if ((s = Console.ReadLine()) != null
+                    && int.TryParse(s, out int i) // c# 7
+                    && i >= 0
+                    && i < namedFactories.Count)
+                {
+                    Console.Write("Specify amount: ");
+                    s = Console.ReadLine();
+                    if (s != null
+                        && int.TryParse(s, out int amount)
+                        && amount > 0)
+                    {
+                        return namedFactories[i].Item2.Prepare(amount);
+                    }
+                }
+                Console.WriteLine("Incorrect input, try again.");
+            }
         }
     }
-
     class Program
     {
         static void Main(string[] args)
