@@ -35,6 +35,16 @@ namespace Prototype
             Names = names;
             Address = address;
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(Names)}: {string.Join(",", Names)}, {nameof(Address)}: {Address}";
+        }
+
+        public object Clone()
+        {
+            return new Person(Names, Address);
+        }
     }
 
     public static class Demo
