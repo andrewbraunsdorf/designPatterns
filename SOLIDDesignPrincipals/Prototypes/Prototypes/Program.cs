@@ -47,7 +47,7 @@ namespace Prototype
         }
     }
 
-    public static class Demo
+    class Program
     {
         static void Main()
         {
@@ -56,7 +56,7 @@ namespace Prototype
 
             var jane = (Person)john.Clone();
             jane.Address.HouseNumber = 321; 
-            
+
             jane.Names[0] = "Jane";
 
             Console.WriteLine(john);
