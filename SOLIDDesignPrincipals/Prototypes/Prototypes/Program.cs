@@ -51,7 +51,18 @@ namespace Prototype
     {
         static void Main()
         {
+        
+            var john = new Person(new[] { "John", "Smith" }, new Address("London Road", 123));
 
+            var jane = (Person)john.Clone();
+            jane.Address.HouseNumber = 321; 
+            
+            jane.Names[0] = "Jane";
+
+            Console.WriteLine(john);
+            Console.WriteLine(jane);
+            Console.ReadLine();
+        
         }
     }
 }
