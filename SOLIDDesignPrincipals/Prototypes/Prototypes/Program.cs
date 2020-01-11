@@ -25,6 +25,18 @@ namespace Prototype
         }
     }
 
+    public class Person : ICloneable
+    {
+        public readonly string[] Names;
+        public readonly Address Address;
+
+        public Person(string[] names, Address address)
+        {
+            Names = names;
+            Address = address;
+        }
+    }
+
     public static class Demo
     {
         static void Main()
