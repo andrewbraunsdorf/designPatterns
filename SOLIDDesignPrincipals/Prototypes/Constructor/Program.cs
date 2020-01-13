@@ -60,7 +60,8 @@ namespace Constructor
             chris.Name = "Chris";
             Console.WriteLine(john);
             Console.WriteLine(chris);
-
+            
+            Console.ReadLine();
         }
     }
 }
