@@ -55,8 +55,11 @@ namespace Constructor
         {
             var john = new Employee("John", new Address("123 London Road", "London", "UK"));
 
+            var chris = new Employee(john);
+
             chris.Name = "Chris";
             Console.WriteLine(john);
+            Console.WriteLine(chris);
 
         }
     }
