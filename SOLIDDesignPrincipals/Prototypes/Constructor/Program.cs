@@ -53,6 +53,10 @@ namespace Constructor
     {
         static void Main(string[] args)
         {
+            var john = new Employee("John", new Address("123 London Road", "London", "UK"));
+
+            chris.Name = "Chris";
+            Console.WriteLine(john);
 
         }
     }
