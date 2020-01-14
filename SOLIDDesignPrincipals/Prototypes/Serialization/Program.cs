@@ -36,6 +36,14 @@ namespace Serialization
     {
         static void Main()
         {
+          Foo foo = new Foo { Stuff = 42, Whatever = "abc" };
+
+            Foo foo2 = foo.DeepCopy(); 
+            
+
+            foo2.Whatever = "xyz";
+            Console.WriteLine(foo);
+            Console.WriteLine(foo2);
             Console.ReadLine();
         }
     }
