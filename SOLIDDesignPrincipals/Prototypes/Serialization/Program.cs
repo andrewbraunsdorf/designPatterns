@@ -47,10 +47,12 @@ namespace Serialization
     {
         static void Main()
         {
-          Foo foo = new Foo { Stuff = 42, Whatever = "abc" };
+            Foo foo = new Foo { Stuff = 42, Whatever = "abc" };
 
-            Foo foo2 = foo.DeepCopy(); 
+            // crashes without [Serializable]
+            //Foo foo2 = foo.DeepCopy(); 
             
+            Foo foo2 = foo.DeepCopyXml();
 
             foo2.Whatever = "xyz";
             Console.WriteLine(foo);
