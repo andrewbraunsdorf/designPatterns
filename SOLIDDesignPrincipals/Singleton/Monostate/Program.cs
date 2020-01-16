@@ -18,7 +18,13 @@ namespace Singleton
     {
         static void Main(string[] args)
         {
-            Console.ReadLine();
+          var ceo = new ChiefExecutiveOfficer();
+          ceo.Name = "Adam Smith";
+          ceo.Age = 55;
+
+          var ceo2 = new ChiefExecutiveOfficer();
+          Console.WriteLine(ceo2);
+          Console.ReadLine();
         }
     }
 }
