@@ -20,6 +20,23 @@ namespace Vector
             return $"{nameof(X)}: {X}, {nameof(Y)}: {Y}";
         }
     }
+
+        public class Line
+    {
+        public Point Start;
+        public Point End;
+
+        public Line(Point start, Point end)
+        {
+            this.Start = start;
+            this.End = end;
+        }
+    }
+
+    public class VectorObject : Collection<Line>
+    {
+
+    }
     class Program
     {
         static void Main(string[] args)
