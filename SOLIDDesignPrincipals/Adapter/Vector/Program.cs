@@ -63,6 +63,21 @@ namespace Vector
             int bottom = Math.Max(line.Start.Y, line.End.Y);
             int dx = right - left;
             int dy = line.End.Y - line.Start.Y;
+
+            if (dx == 0)
+            {
+                for (int y = top; y <= bottom; ++y)
+                {
+                    Add(new Point(left, y));
+                }
+            }
+            else if (dy == 0)
+            {
+                for (int x = left; x <= right; ++x)
+                {
+                    Add(new Point(x, top));
+                }
+            }
         }
     }
     class Program
