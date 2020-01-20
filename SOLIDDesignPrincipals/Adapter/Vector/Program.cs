@@ -82,6 +82,17 @@ namespace Vector
     }
     class Program
     {
+
+    private static readonly List<VectorObject> vectorObjects = new List<VectorObject>
+    {
+      new VectorRectangle(1, 1, 10, 10),
+      new VectorRectangle(3, 3, 6, 6)
+    };
+
+        public static void DrawPoint(Point p)
+        {
+            Console.Write(".");
+        }
         static void Main(string[] args)
         {
         }
