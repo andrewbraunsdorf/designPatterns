@@ -30,7 +30,35 @@ namespace Adapter
             return Equals((Point)obj);
         }
 
-        
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Y;
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
+        }
+    }
+
+    public class Line
+    {
+        public Point Start;
+        public Point End;
+
+        public Line(Point start, Point end)
+        {
+            this.Start = start;
+            this.End = end;
+        }
+
+        protected bool Equals(Line other)
+        {
+            return Equals(Start, other.Start) && Equals(End, other.End);
+        }
     }
 
 
