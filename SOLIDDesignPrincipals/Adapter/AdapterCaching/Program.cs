@@ -59,7 +59,29 @@ namespace Adapter
         {
             return Equals(Start, other.Start) && Equals(End, other.End);
         }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Point)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Y;
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
+        }
     }
+
 
 
     class Program
