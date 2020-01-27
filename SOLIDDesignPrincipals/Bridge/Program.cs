@@ -35,6 +35,15 @@ namespace Bridge
         public abstract void Resize(float factor);
     }
 
+    public class Circle : Shape
+    {
+        private float radius;
+
+        public Circle(IRenderer renderer, float radius) : base(renderer)
+        {
+            this.radius = radius;
+        }
+    }    
     class Program
     {
         static void Main(string[] args)
