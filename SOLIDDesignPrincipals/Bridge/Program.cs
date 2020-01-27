@@ -57,6 +57,7 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
+          Console.ReadLine();
         }
     }
 }
