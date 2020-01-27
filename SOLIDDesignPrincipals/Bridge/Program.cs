@@ -43,6 +43,15 @@ namespace Bridge
         {
             this.radius = radius;
         }
+        public override void Draw()
+        {
+            renderer.RenderCircle(radius);
+        }
+
+        public override void Resize(float factor)
+        {
+            radius *= factor;
+        }        
     }    
     class Program
     {
