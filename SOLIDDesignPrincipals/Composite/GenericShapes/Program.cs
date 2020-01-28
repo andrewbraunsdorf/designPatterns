@@ -19,6 +19,13 @@ namespace GeometricShapes
             foreach (var child in Children)
                 child.Print(sb, depth + 1);
         }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            Print(sb, 0);
+            return sb.ToString();
+        }
     }
 
      class Program
