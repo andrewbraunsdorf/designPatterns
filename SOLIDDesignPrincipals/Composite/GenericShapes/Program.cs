@@ -10,6 +10,15 @@ namespace GeometricShapes
         public string Color;
         private Lazy<List<GraphicObject>> children = new Lazy<List<GraphicObject>>();
         public List<GraphicObject> Children => children.Value;
+
+        private void Print(StringBuilder sb, int depth)
+        {
+            sb.Append(new string('*', depth))
+                .Append(string.IsNullOrWhiteSpace(Color) ? string.Empty : $"{Color} ")
+                .AppendLine($"{Name}");
+            foreach (var child in Children)
+                child.Print(sb, depth + 1);
+        }
     }
 
      class Program
