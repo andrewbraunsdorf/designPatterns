@@ -28,6 +28,16 @@ namespace GeometricShapes
         }
     }
 
+    public class Circle : GraphicObject
+    {
+        public override string Name => "Circle";
+    }
+
+    public class Square : GraphicObject
+    {
+        public override string Name => "Square";
+    }
+
      class Program
     {
         static void Main(string[] args)
