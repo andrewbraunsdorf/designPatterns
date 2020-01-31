@@ -22,7 +22,7 @@ namespace CustomStringBuilder
         {
             return builder.EnsureCapacity(capacity);
         }
-        
+
         public string ToString(int startIndex, int length)
         {
             return builder.ToString(startIndex, length);
@@ -31,6 +31,18 @@ namespace CustomStringBuilder
         public CodeBuilder Clear()
         {
             builder.Clear();
+            return this;
+        }
+
+        public CodeBuilder Append(char value, int repeatCount)
+        {
+            builder.Append(value, repeatCount);
+            return this;
+        }
+
+        public CodeBuilder Append(char[] value, int startIndex, int charCount)
+        {
+            builder.Append(value, startIndex, charCount);
             return this;
         }
     }
