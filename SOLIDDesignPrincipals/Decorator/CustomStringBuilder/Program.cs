@@ -22,6 +22,17 @@ namespace CustomStringBuilder
         {
             return builder.EnsureCapacity(capacity);
         }
+        
+        public string ToString(int startIndex, int length)
+        {
+            return builder.ToString(startIndex, length);
+        }
+
+        public CodeBuilder Clear()
+        {
+            builder.Clear();
+            return this;
+        }
     }
 
     class Program
