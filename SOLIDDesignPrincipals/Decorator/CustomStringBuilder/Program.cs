@@ -69,6 +69,17 @@ namespace CustomStringBuilder
             builder.AppendLine(value);
             return this;
         }
+
+        public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count)
+        {
+            builder.CopyTo(sourceIndex, destination, destinationIndex, count);
+        }
+
+        public CodeBuilder Insert(int index, string value, int count)
+        {
+            builder.Insert(index, value, count);
+            return this;
+        }
     }
 
     class Program
