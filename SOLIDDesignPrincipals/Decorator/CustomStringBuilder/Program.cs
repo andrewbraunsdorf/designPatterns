@@ -45,6 +45,18 @@ namespace CustomStringBuilder
             builder.Append(value, startIndex, charCount);
             return this;
         }
+
+        public CodeBuilder Append(string value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(string value, int startIndex, int count)
+        {
+            builder.Append(value, startIndex, count);
+            return this;
+        }
     }
 
     class Program
