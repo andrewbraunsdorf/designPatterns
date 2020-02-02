@@ -57,6 +57,18 @@ namespace CustomStringBuilder
             builder.Append(value, startIndex, count);
             return this;
         }
+
+        public CodeBuilder AppendLine()
+        {
+            builder.AppendLine();
+            return this;
+        }
+
+        public CodeBuilder AppendLine(string value)
+        {
+            builder.AppendLine(value);
+            return this;
+        }
     }
 
     class Program
