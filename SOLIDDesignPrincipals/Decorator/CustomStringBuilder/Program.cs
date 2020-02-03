@@ -80,7 +80,7 @@ namespace CustomStringBuilder
             builder.Insert(index, value, count);
             return this;
         }
-        
+
         public CodeBuilder Remove(int startIndex, int length)
         {
             builder.Remove(startIndex, length);
@@ -88,6 +88,18 @@ namespace CustomStringBuilder
         }
 
         public CodeBuilder Append(bool value)
+        {
+            builder.Append(value);
+            return this;
+        }
+        
+        public CodeBuilder Append(sbyte value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(byte value)
         {
             builder.Append(value);
             return this;
