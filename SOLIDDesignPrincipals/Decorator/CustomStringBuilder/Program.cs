@@ -140,6 +140,19 @@ namespace CustomStringBuilder
             builder.Append(value);
             return this;
         }
+
+        public CodeBuilder Append(decimal value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(ushort value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
     }
 
     class Program
