@@ -92,7 +92,7 @@ namespace CustomStringBuilder
             builder.Append(value);
             return this;
         }
-        
+
         public CodeBuilder Append(sbyte value)
         {
             builder.Append(value);
@@ -100,6 +100,18 @@ namespace CustomStringBuilder
         }
 
         public CodeBuilder Append(byte value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(char value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(short value)
         {
             builder.Append(value);
             return this;
