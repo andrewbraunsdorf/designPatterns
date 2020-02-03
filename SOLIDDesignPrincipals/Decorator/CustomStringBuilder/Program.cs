@@ -165,6 +165,18 @@ namespace CustomStringBuilder
             return this;
         }
 
+        public CodeBuilder Append(object value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(char[] value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
     }
 
     class Program
