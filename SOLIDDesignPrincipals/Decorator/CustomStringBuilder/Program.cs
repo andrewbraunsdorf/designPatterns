@@ -153,6 +153,18 @@ namespace CustomStringBuilder
             return this;
         }
 
+        public CodeBuilder Append(uint value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(ulong value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
     }
 
     class Program
