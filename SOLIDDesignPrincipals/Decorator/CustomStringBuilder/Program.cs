@@ -128,6 +128,18 @@ namespace CustomStringBuilder
             builder.Append(value);
             return this;
         }
+
+        public CodeBuilder Append(float value)
+        {
+            builder.Append(value);
+            return this;
+        }
+
+        public CodeBuilder Append(double value)
+        {
+            builder.Append(value);
+            return this;
+        }
     }
 
     class Program
