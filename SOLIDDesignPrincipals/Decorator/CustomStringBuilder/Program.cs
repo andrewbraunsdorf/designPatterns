@@ -270,6 +270,12 @@ namespace CustomStringBuilder
           builder.Insert(index, value);
           return this;
         }
+        
+        public CodeBuilder Insert(int index, object value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
 
     }
 
