@@ -201,6 +201,18 @@ namespace CustomStringBuilder
           return this;
         }
 
+        public CodeBuilder Insert(int index, short value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, char value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
     }
 
     class Program
