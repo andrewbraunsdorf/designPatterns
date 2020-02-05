@@ -177,6 +177,18 @@ namespace CustomStringBuilder
             return this;
         }
 
+        public CodeBuilder Insert(int index, string value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, bool value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
     }
 
     class Program
