@@ -229,6 +229,13 @@ namespace CustomStringBuilder
           builder.Insert(index, value);
           return this;
         }
+
+        public CodeBuilder Insert(int index, long value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
     }
 
     class Program
