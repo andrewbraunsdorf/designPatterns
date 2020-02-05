@@ -236,6 +236,24 @@ namespace CustomStringBuilder
           return this;
         }
 
+        public CodeBuilder Insert(int index, float value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, double value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, decimal value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
     }
 
     class Program
