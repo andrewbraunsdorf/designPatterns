@@ -253,6 +253,23 @@ namespace CustomStringBuilder
           builder.Insert(index, value);
           return this;
         }
+        public CodeBuilder Insert(int index, ushort value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, uint value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, ulong value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
 
     }
 
