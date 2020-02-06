@@ -288,6 +288,19 @@ namespace CustomStringBuilder
           return this;
         }
 
+        public CodeBuilder AppendFormat(string format, object arg0, object arg1, object arg2)
+        {
+          builder.AppendFormat(format, arg0, arg1, arg2);
+          return this;
+        }
+
+        public CodeBuilder AppendFormat(string format, params object[] args)
+        {
+          builder.AppendFormat(format, args);
+          return this;
+        }
+
+
     }
 
     class Program
