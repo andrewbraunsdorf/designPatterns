@@ -212,7 +212,23 @@ namespace CustomStringBuilder
           builder.Insert(index, value);
           return this;
         }
+        public CodeBuilder Insert(int index, char[] value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
 
+        public CodeBuilder Insert(int index, char[] value, int startIndex, int charCount)
+        {
+          builder.Insert(index, value, startIndex, charCount);
+          return this;
+        }
+
+        public CodeBuilder Insert(int index, int value)
+        {
+          builder.Insert(index, value);
+          return this;
+        }
     }
 
     class Program
