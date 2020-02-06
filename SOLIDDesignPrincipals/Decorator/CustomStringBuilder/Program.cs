@@ -299,6 +299,11 @@ namespace CustomStringBuilder
           builder.AppendFormat(format, args);
           return this;
         }
+        public CodeBuilder AppendFormat(IFormatProvider provider, string format, params object[] args)
+        {
+          builder.AppendFormat(provider, format, args);
+          return this;
+        }
 
 
     }
