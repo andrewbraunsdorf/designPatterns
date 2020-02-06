@@ -276,6 +276,17 @@ namespace CustomStringBuilder
           builder.Insert(index, value);
           return this;
         }
+        public CodeBuilder AppendFormat(string format, object arg0)
+        {
+          builder.AppendFormat(format, arg0);
+          return this;
+        }
+
+        public CodeBuilder AppendFormat(string format, object arg0, object arg1)
+        {
+          builder.AppendFormat(format, arg0, arg1);
+          return this;
+        }
 
     }
 
