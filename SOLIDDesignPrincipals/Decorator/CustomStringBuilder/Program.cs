@@ -304,6 +304,17 @@ namespace CustomStringBuilder
           builder.AppendFormat(provider, format, args);
           return this;
         }
+        
+        public CodeBuilder Replace(string oldValue, string newValue)
+        {
+          builder.Replace(oldValue, newValue);
+          return this;
+        }
+
+        public bool Equals(CodeBuilder sb)
+        {
+          return builder.Equals(sb);
+        }
 
 
     }
