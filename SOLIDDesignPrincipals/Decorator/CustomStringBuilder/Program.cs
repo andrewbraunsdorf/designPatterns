@@ -304,7 +304,7 @@ namespace CustomStringBuilder
           builder.AppendFormat(provider, format, args);
           return this;
         }
-        
+
         public CodeBuilder Replace(string oldValue, string newValue)
         {
           builder.Replace(oldValue, newValue);
@@ -316,6 +316,23 @@ namespace CustomStringBuilder
           return builder.Equals(sb);
         }
 
+        public CodeBuilder Replace(string oldValue, string newValue, int startIndex, int count)
+        {
+          builder.Replace(oldValue, newValue, startIndex, count);
+          return this;
+        }
+
+        public CodeBuilder Replace(char oldChar, char newChar)
+        {
+          builder.Replace(oldChar, newChar);
+          return this;
+        }
+
+        public CodeBuilder Replace(char oldChar, char newChar, int startIndex, int count)
+        {
+          builder.Replace(oldChar, newChar, startIndex, count);
+          return this;
+        }
 
     }
 
