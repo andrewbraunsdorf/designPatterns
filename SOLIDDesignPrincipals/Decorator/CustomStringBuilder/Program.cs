@@ -334,6 +334,14 @@ namespace CustomStringBuilder
           return this;
         }
 
+        public int Capacity
+        {
+          get => builder.Capacity;
+          set => builder.Capacity = value;
+        }
+
+        public int MaxCapacity => builder.MaxCapacity;
+
     }
 
     class Program
