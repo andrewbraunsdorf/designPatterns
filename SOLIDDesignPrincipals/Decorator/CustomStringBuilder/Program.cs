@@ -342,6 +342,17 @@ namespace CustomStringBuilder
 
         public int MaxCapacity => builder.MaxCapacity;
 
+       public int Length
+        {
+          get => builder.Length;
+          set => builder.Length = value;
+        }
+
+        public char this[int index]
+        {
+          get => builder[index];
+          set => builder[index] = value;
+        }
     }
 
     class Program
