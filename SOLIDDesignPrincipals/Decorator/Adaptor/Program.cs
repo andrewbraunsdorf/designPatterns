@@ -14,6 +14,17 @@ namespace AdapterDecorator
             msb.sb.Append(s);
             return msb;
         }
+
+        public static MyStringBuilder operator +(MyStringBuilder msb, string s)
+        {
+            msb.Append(s);
+            return msb;
+        }
+
+        public override string ToString()
+        {
+            return sb.ToString();
+        }
     }
 
     class Program
