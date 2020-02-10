@@ -35,6 +35,16 @@ namespace AdapterDecorator
         {
             return sb.EnsureCapacity(capacity);
         }
+
+        public string ToString(int startIndex, int length)
+        {
+            return sb.ToString(startIndex, length);
+        }
+
+        public StringBuilder Clear()
+        {
+            return sb.Clear();
+        }
     }
 
     class Program
