@@ -45,6 +45,16 @@ namespace AdapterDecorator
         {
             return sb.Clear();
         }
+
+        public StringBuilder Append(char value, int repeatCount)
+        {
+            return sb.Append(value, repeatCount);
+        }
+
+        public StringBuilder Append(char[] value, int startIndex, int charCount)
+        {
+            return sb.Append(value, startIndex, charCount);
+        }
     }
 
     class Program
