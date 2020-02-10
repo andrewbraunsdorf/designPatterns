@@ -25,6 +25,16 @@ namespace AdapterDecorator
         {
             return sb.ToString();
         }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            ((ISerializable)sb).GetObjectData(info, context);
+        }
+
+        public int EnsureCapacity(int capacity)
+        {
+            return sb.EnsureCapacity(capacity);
+        }
     }
 
     class Program
