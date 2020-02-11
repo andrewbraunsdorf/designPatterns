@@ -75,6 +75,11 @@ namespace AdapterDecorator
         {
         return sb.AppendLine(value);
         }
+
+        public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count)
+        {
+        sb.CopyTo(sourceIndex, destination, destinationIndex, count);
+        }
     }
 
     class Program
