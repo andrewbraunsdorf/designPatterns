@@ -80,6 +80,11 @@ namespace AdapterDecorator
         {
         sb.CopyTo(sourceIndex, destination, destinationIndex, count);
         }
+
+        public StringBuilder Insert(int index, string value, int count)
+        {
+        return sb.Insert(index, value, count);
+        }
     }
 
     class Program
