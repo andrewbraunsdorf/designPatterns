@@ -85,6 +85,11 @@ namespace AdapterDecorator
         {
         return sb.Insert(index, value, count);
         }
+
+        public StringBuilder Remove(int startIndex, int length)
+        {
+        return sb.Remove(startIndex, length);
+        }
     }
 
     class Program
