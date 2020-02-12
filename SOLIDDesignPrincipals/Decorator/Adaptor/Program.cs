@@ -90,6 +90,21 @@ namespace AdapterDecorator
         {
         return sb.Remove(startIndex, length);
         }
+
+        public StringBuilder Append(bool value)
+        {
+        return sb.Append(value);
+        }
+
+        public StringBuilder Append(sbyte value)
+        {
+        return sb.Append(value);
+        }
+
+        public StringBuilder Append(byte value)
+        {
+        return sb.Append(value);
+        }
     }
 
     class Program
