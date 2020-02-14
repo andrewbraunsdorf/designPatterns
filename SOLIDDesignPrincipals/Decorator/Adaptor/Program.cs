@@ -125,6 +125,16 @@ namespace AdapterDecorator
         {
         return sb.Append(value);
         }
+
+        public StringBuilder Append(float value)
+        {
+        return sb.Append(value);
+        }
+
+        public StringBuilder Append(double value)
+        {
+        return sb.Append(value);
+        }
     }
 
     class Program
