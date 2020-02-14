@@ -105,6 +105,16 @@ namespace AdapterDecorator
         {
         return sb.Append(value);
         }
+
+        public StringBuilder Append(char value)
+        {
+        return sb.Append(value);
+        }
+
+        public StringBuilder Append(short value)
+        {
+        return sb.Append(value);
+        }
     }
 
     class Program
