@@ -145,6 +145,16 @@ namespace AdapterDecorator
         {
         return sb.Append(value);
         }
+
+        public StringBuilder Append(uint value)
+        {
+        return sb.Append(value);
+        }
+
+        public StringBuilder Append(ulong value)
+        {
+        return sb.Append(value);
+        }
     }
 
     class Program
