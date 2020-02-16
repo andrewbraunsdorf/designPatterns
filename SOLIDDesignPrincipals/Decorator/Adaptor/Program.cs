@@ -175,6 +175,16 @@ namespace AdapterDecorator
         {
         return sb.Insert(index, value);
         }
+
+        public StringBuilder Insert(int index, long value)
+        {
+        return sb.Insert(index, value);
+        }
+
+        public StringBuilder Insert(int index, float value)
+        {
+        return sb.Insert(index, value);
+        }
     }
 
     class Program
