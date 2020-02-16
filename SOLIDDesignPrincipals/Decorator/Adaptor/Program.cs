@@ -235,6 +235,17 @@ namespace AdapterDecorator
         {
         return sb.AppendFormat(format, args);
         }
+
+        public StringBuilder AppendFormat(IFormatProvider provider, string format, object arg0)
+        {
+        return sb.AppendFormat(provider, format, arg0);
+        }
+
+        public StringBuilder AppendFormat(IFormatProvider provider, string format, object arg0,
+        object arg1)
+        {
+        return sb.AppendFormat(provider, format, arg0, arg1);
+        }
     }
 
     class Program
