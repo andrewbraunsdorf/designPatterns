@@ -267,6 +267,16 @@ namespace AdapterDecorator
         {
         return this.sb.Equals(sb);
         }
+
+        public StringBuilder Replace(string oldValue, string newValue, int startIndex, int count)
+        {
+        return sb.Replace(oldValue, newValue, startIndex, count);
+        }
+
+        public StringBuilder Replace(char oldChar, char newChar)
+        {
+        return sb.Replace(oldChar, newChar);
+        }
     }
 
     class Program
