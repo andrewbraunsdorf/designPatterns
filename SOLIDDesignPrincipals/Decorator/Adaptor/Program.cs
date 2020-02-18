@@ -257,6 +257,11 @@ namespace AdapterDecorator
         {
         return sb.AppendFormat(provider, format, args);
         }
+
+        public StringBuilder Replace(string oldValue, string newValue)
+        {
+        return sb.Replace(oldValue, newValue);
+        }
     }
 
     class Program
