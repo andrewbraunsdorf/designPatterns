@@ -262,6 +262,11 @@ namespace AdapterDecorator
         {
         return sb.Replace(oldValue, newValue);
         }
+
+        public bool Equals(StringBuilder sb)
+        {
+        return this.sb.Equals(sb);
+        }
     }
 
     class Program
