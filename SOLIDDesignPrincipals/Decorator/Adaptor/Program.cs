@@ -277,6 +277,11 @@ namespace AdapterDecorator
         {
         return sb.Replace(oldChar, newChar);
         }
+
+        public StringBuilder Replace(char oldChar, char newChar, int startIndex, int count)
+        {
+        return sb.Replace(oldChar, newChar, startIndex, count);
+        }
     }
 
     class Program
