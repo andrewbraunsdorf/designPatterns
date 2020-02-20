@@ -282,6 +282,12 @@ namespace AdapterDecorator
         {
         return sb.Replace(oldChar, newChar, startIndex, count);
         }
+
+        public int Capacity
+        {
+        get => sb.Capacity;
+        set => sb.Capacity = value;
+        }
     }
 
     class Program
