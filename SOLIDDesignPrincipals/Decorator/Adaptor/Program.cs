@@ -288,6 +288,14 @@ namespace AdapterDecorator
         get => sb.Capacity;
         set => sb.Capacity = value;
         }
+
+        public int MaxCapacity => sb.MaxCapacity;
+
+        public int Length
+        {
+        get => sb.Length;
+        set => sb.Length = value;
+        }
     }
 
     class Program
