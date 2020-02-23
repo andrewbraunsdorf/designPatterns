@@ -37,6 +37,11 @@ namespace MultipleInheritances
         {
             lizard.Crawl();
         }
+
+        public void Fly()
+        {
+            bird.Fly();
+        }
     }
 
     class Program
