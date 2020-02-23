@@ -22,6 +22,12 @@ namespace MultipleInheritances
         }
     }
 
+    public class Dragon 
+    {
+        private Bird bird;
+        private Lizard lizard;
+    }
+
     class Program
     {
         static void Main(string[] args)
