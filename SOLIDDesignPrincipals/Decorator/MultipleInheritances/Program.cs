@@ -26,6 +26,12 @@ namespace MultipleInheritances
     {
         private Bird bird;
         private Lizard lizard;
+
+        public Dragon(Bird bird, Lizard lizard)
+        {
+            this.bird = bird ?? throw new ArgumentNullException(paramName: nameof(bird));
+            this.lizard = lizard ?? throw new ArgumentNullException(paramName: nameof(lizard));
+        }
     }
 
     class Program
