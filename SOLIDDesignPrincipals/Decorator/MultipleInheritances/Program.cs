@@ -32,6 +32,11 @@ namespace MultipleInheritances
             this.bird = bird ?? throw new ArgumentNullException(paramName: nameof(bird));
             this.lizard = lizard ?? throw new ArgumentNullException(paramName: nameof(lizard));
         }
+
+        public void Crawl()
+        {
+            lizard.Crawl();
+        }
     }
 
     class Program
