@@ -296,6 +296,12 @@ namespace AdapterDecorator
         get => sb.Length;
         set => sb.Length = value;
         }
+
+        public char this[int index]
+        {
+        get => sb[index];
+        set => sb[index] = value;
+        }
     }
 
     class Program
